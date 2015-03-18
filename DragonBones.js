@@ -1664,7 +1664,7 @@ dragonBones.TimelineState = cc.Class.extend({
 		}else{
 			this._tweenEasing = currentFrame.tweenEasing;
 
-			if (this._tweenEasing == dragonBones.NO_TWEEN_EASING || this._tweenEasing == dragonBones.AUTO_TWEEN_EASING){// frame no tween
+			if (this._tweenEasing == dragonBones.NO_TWEEN_EASING || this._tweenEasing == dragonBones.AUTO_TWEEN_EASING|| this._tweenEasing == 0){// frame no tween
 				this._tweenEasing = dragonBones.NO_TWEEN_EASING;
 				tweenEnabled = false;
 			}else{
@@ -5434,7 +5434,7 @@ dragonBones.DBCCFactory = dragonBones.BaseFactory.extend({
 			offset.y = cy2 - cy1;
 		}
 		// sprite
-		
+
 		var spriteFrame = new cc.SpriteFrame(texture, rect, textureData.rotated, offset, originSize);
 		var display = new cc.Sprite(spriteFrame);
 		display.setCascadeColorEnabled(true);
